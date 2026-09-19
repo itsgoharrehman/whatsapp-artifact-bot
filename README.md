@@ -1,68 +1,47 @@
-# WhatsApp Artifact Generation Engine
+# whatsapp-artifact-bot
 
-An enterprise-grade, anti-ban compliant **PDF & PowerPoint (.pptx) Artifact Generation Bot** built on `@whiskeysockets/baileys`.
+An automated WhatsApp bot engine designed for real-time document synthesis, PDF report compilation, and artifact generation with an integrated companion web administration interface.
 
-Designed with a **Multi-Key Parallel AI Racing Engine** across **Groq** and **NVIDIA NIM**, this bot delivers publication-grade visual documents in **2–4 seconds** with strict per-user quotas and zero conversational bloat.
+## Architecture and Stack
 
----
+* **Engine**: Node.js (v18+), `@whiskeysockets/baileys`
+* **Frontend**: Companion web application for live connection status
+* **Document Engine**: PDF and text generation pipelines
 
-## 🌟 Key Features
+## Key Features
 
-- **Multi-Key Parallel AI Racing (`Promise.any`)**: Dispatches concurrent requests across up to 10 Groq API keys and NVIDIA NIM models. The fastest valid response wins instantly.
-- **Dedicated Artifact Commands**:
-  - `/pdf <topic>` — Generates rich, multi-page vector-styled PDF documents.
-  - `/ppt <topic>` — Generates executive 16:9 PowerPoint presentation decks with cards, KPIs, tables, and comparison slides.
-- **Quotas & Rate Limiting**:
-  - **Standard Users**: Max **10 generations/day**, max **4 pages per PDF**, max **10 slides per PPT**, 30s anti-spam cooldown.
-  - **Owner & VIP Users**: **Unlimited (∞)** generations and depth.
-  - Check quota balance anytime with `/usage` or `/limit`.
-- **Zero Conversational Bloat**: Completely removed all casual chat, persona rules, voice notes, and image chatter. The bot exclusively generates documents on command.
-- **Live Web Dashboard**: Sleek web interface for live QR code pairing, multi-key health monitoring, and live generation analytics.
+* **Anti-Ban Compliance**: Respects WhatsApp connection limits and message queuing pacing.
+* **Companion Web GUI**: Monitor QR code authentication and connection status from a clean browser dashboard.
+* **Document Pipeline**: Synthesizes structured data into portable document formats.
 
----
+## Getting Started
 
-## 🚀 Getting Started
+### Prerequisites
+* Node.js v18+
 
-### 1. Configuration
-Create a `.env` file from `.env.example`:
-
-```env
-PORT=8100
-HOST=0.0.0.0
-OWNER_NUMBER=92300XXXXXXX
-
-# User Quotas
-DAILY_USER_LIMIT=10
-NORMAL_USER_MAX_PAGES=4
-NORMAL_USER_MAX_SLIDES=10
-
-# Groq Multi-Key Pool (Up to 10 keys)
-GROQ_API_KEYS=gsk_key1,gsk_key2,gsk_key3
-
-# NVIDIA NIM Keys
-NVIDIA_API_KEYS=nvapi-key1,nvapi-key2
+### Installation
+```bash
+git clone https://github.com/itsgoharrehman/whatsapp-artifact-bot.git
+cd whatsapp-artifact-bot
+npm install
 ```
 
-### 2. Running
+### Running
 ```bash
-npm install
 npm start
 ```
-Open `http://localhost:8100` (or your Alwaysdata URL) to scan the QR code and monitor live generation logs.
 
----
+## Security Policy
 
-## 📋 Commands
+Security reports should be submitted to `goharrehmanfsd260@gmail.com`.
 
-### User Commands (Available in all groups)
-- `/pdf <topic>` ── Generate formatted PDF document
-- `/ppt <topic>` ── Generate PowerPoint presentation
-- `/usage` ── Check daily quota balance and reset time
-- `/help` ── Display command guide
+## Maintainer
 
-### Owner Commands
-- `/status` ── Live system health, uptime, active keys
-- `/stats` ── Generation analytics and top users
-- `/keys` ── Multi-key health matrix
-- `/unlimit <phone>` ── Grant permanent unlimited VIP access
-- `/reset <phone | all>` ── Reset daily quota
+* **Gohar Rehman**
+* GitHub: [@itsgoharrehman](https://github.com/itsgoharrehman)
+* Email: `goharrehmanfsd260@gmail.com`
+* Website: [itsgoharrehman.netlify.app](https://itsgoharrehman.netlify.app/)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
